@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const Park = require('..models/park')
+const Park = require('../models/park')
 const request = require('superagent')
+
 
 
 // Index
@@ -21,6 +22,7 @@ router.get('/', async (req, res) => {
 })
 
 
+
 // Show
 router.get('/:id', async (req, res) => {
   try {
@@ -37,6 +39,7 @@ router.get('/:id', async (req, res) => {
 })
 
 
+
 // Update
 router.put('/:id', async (req, res) => {
   try {
@@ -51,6 +54,7 @@ router.put('/:id', async (req, res) => {
     res.send(err)
   }
 })
+
 
 
 // Search
