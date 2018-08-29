@@ -2,7 +2,9 @@ const mongoose = require('mongoose')
 
 const parkSchema = new mongoose.Schema({
   name: String,
-  location: String,
+  address: String,
+  latitude: Number,
+  longitude: Number,
   pictures: []
 })
 
