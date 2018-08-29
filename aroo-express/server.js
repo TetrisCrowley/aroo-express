@@ -3,6 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const session = require('express-session')
+const humanizeString = require('humanize-string')
 
 const PORT = process.env.PORT || 9000;
 
@@ -12,6 +13,7 @@ require('./db/db')
 
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
+
 
 const corsOptions ={
   origin: 'http://localhost:3000',
