@@ -78,7 +78,7 @@ router.get('/search/:parklocation', (req, res) => {
   location = req.params.parklocation
   console.log(location)
   request
-    .get(`https://api.yelp.com/v3/businesses/search?categories=dog_parks&radius=10000&sort_by=distance&location=${location}`) // &radius=10&sort_by=distance
+    .get(`https://api.yelp.com/v3/businesses/search?categories=dog_parks&radius=10000&sort_by=distance&location=${location}`) 
     .set('Authorization', 'Bearer gr0amugCLWzgKkSCIgPZnPI8e7cRXFuEprIOGszYzUIo9JH5kWT1LMMZUkIW0tOBpywUrjmxns-zKDh5FoGsj4_SPNZG_-WDeGAzOCESd0wG9ZX5tUOXIRo4H2poW3Yx')
     .end((err, response) => {
       if (err) {
